@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realty API Practice</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="fluid-container header-div">
+      <h1>Real State <span id="app-span">App</span></h1>
+      <p id="paragraph-h1">Discover properties anywhere in the USA</p>
+    </div>
+
+    <form action="" method="GET">
+      <div class="cool-div">
+        <div id="input-div">
+          <input
+            type="text"
+            placeholder="Introduce a city or state"
+            id="city-input"
+            name="city"
+            required
+          />
+        </div>
+
+        <div class="div-form">
+          <div class="label-class">
+            <label for="sort">Sort by</label>
+          </div>
+          <select class="input-select" name="sort">
+            <option>Relevance</option>
+            <option>Year</option>
+            <option>Price</option>
+          </select>
+        </div>
+
+        <div class="div-form">
+          <div class="label-class">
+            <label for="beds">Minimum Beds</label>
+          </div>
+          <input
+            class="input-select"
+            type="number"
+            min="1"
+            name="beds"
+            required
+          />
+        </div>
+
+        <div>
+          <button type="submit" id="search-button">Search</button>
+        </div>
+      </div>
+    </form>
+
+    <div id="content-div"></div>
+
+    <style>
+      body {
+        text-align: center;
+        background-color: #222222;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+      }
+
+      h1 {
+        font-weight: 800;
+      }
+
+      .header-div {
+        margin-top: 25px;
+      }
+
+      .cool-div {
+        margin: 0 25%;
+      }
+
+      .div-form {
+        text-align: left;
+        width: 315px;
+        display: inline-block;
+        margin: 30px 0;
+      }
+
+      #app-span {
+        color: #09f505;
+      }
+      #paragraph-h1 {
+        color: #09f505;
+      }
+
+      #city-input {
+        border-radius: 7px;
+        width: 615px;
+        padding: 10px;
+        margin-top: 30px;
+      }
+
+      #city-input:hover {
+        border: 4px solid #06af03e7;
+      }
+
+      .input-select {
+        width: 300px;
+        border-radius: 4px;
+      }
+
+      .label-class {
+        text-align: left;
+      }
+
+      #search-button {
+        width: 630px;
+        border-radius: 4px;
+        background-color: #09f505;
+        color: #ffffff;
+        font-weight: 800;
+      }
+    </style>
+
+    <script src="index.js"></script>
+    <!-- <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVeA_f2UXRzSKBCFrMsdd_U3nNcJOEK_0&libraries=places&callback=initMap"
+    ></script> -->
+  </body>
+</html>
